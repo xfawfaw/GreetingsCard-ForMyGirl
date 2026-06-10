@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Optimization -->
+  <title>For The Girl Who Made It 🌸</title>
+  <meta name="description" content="An interactive scrapbook appreciation card celebrating the successful completion of her program.">
+  <meta name="keywords" content="digital scrapbook, greetings card, interactive appreciation, SOS-TA, HIMASISFO, AKPRO, chief organizer">
+  <meta name="author" content="Antigravity pairs with User">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background Particle Effects Layer -->
+  <canvas id="effects-canvas"></canvas>
+
+  <!-- Mixed-Paper Background Collage Layer -->
+  <div class="background-collage">
+    <div class="collage-scrap scrap-kraft"></div>
+    <div class="collage-scrap scrap-grid"></div>
+    <div class="collage-scrap scrap-cardboard"></div>
+    <div class="collage-scrap scrap-lace"></div>
+  </div>
+
+  <!-- Scrapbook Board Overlay Panel representing album open on a desk -->
+  <div class="scrapbook-album">
+    <div class="app-container">
+
+      <!-- ==========================================
+           PAGE 1: NARRATIVE STORY SCREEN (Active on load)
+           ========================================== -->
+      <div id="transition-page" class="view active">
+        <div id="narrative-text" class="narrative-text"></div>
+      </div>
+
+      <!-- ==========================================
+           PAGE 2: APPRECIATION GREETING SCREEN
+           ========================================== -->
+      <div id="appreciation-page" class="view">
+        
+        <!-- A. Closed Envelope View Container -->
+        <div id="envelope-view" class="envelope-view-container">
+          <div class="envelope-card-wrapper">
+            <div id="envelope" class="envelope">
+              <!-- Top opening Flap -->
+              <div class="envelope-flap"></div>
+              <!-- Peeking note paper edge -->
+              <div class="envelope-paper-preview"></div>
+              <!-- Folds styling -->
+              <div class="envelope-left"></div>
+              <div class="envelope-right"></div>
+              <div class="envelope-bottom"></div>
+              <!-- Wax Seal (Click target) -->
+              <div id="envelope-seal" class="envelope-seal">💖</div>
+              <div class="envelope-label">
+                <p class="label-heading">For The Girl Who Made It</p>
+                <p class="label-name"><span class="param-to">her</span> 🌸</p>
+              </div>
+            </div>
+            <div class="envelope-hint">Click the heart seal to open! 💌</div>
+          </div>
+        </div>
+
+        <!-- B. Actual Scrapbook Main View Container (Revealed after opening) -->
+        <div id="appreciation-main-view" class="appreciation-main-container">
+          
+          <div class="appreciation-header">
+            <h2 class="celebration-title">Congratulations, <span class="param-to">my girl</span>! 🌸</h2>
+            <p class="celebration-subtitle">Your first SOS-TA has finally come to an end. And you did an amazing job.</p>
+          </div>
+
+          <div class="appreciation-content">
+            
+            <!-- LEFT PAGE of the Open Book -->
+            <div class="scrapbook-page page-left">
+              <div class="page-corner-tape washi-tape-left"></div>
+              
+              <!-- Digital Bouquet Section -->
+              <div class="bouquet-section">
+                <div class="bouquet-wrapper">
+                  <div class="thumbtack thumbtack-bouquet"></div>
+                  <div class="bouquet-tape"></div>
+                  <div class="bouquet-glow"></div>
+                  <img id="bouquet-img" src="assets/bouquet.png" class="bouquet-img interactive" alt="Cute Pastel Flower Bouquet" title="Click to see flower meanings!">
+                </div>
+                
+                <!-- Flower Meaning Dictionary Card -->
+                <div id="flower-dictionary" class="flower-dictionary-card">
+                  <div class="thumbtack thumbtack-dictionary"></div>
+                  <div class="dictionary-tape"></div>
+                  <h4 class="dictionary-title">🌸 Flower Language Meanings</h4>
+                  <ul class="dictionary-list">
+                    <li><strong>Pink Peonies</strong>: Heartfelt pride, honor, and complete success.</li>
+                    <li><strong>White Daisies</strong>: Innocent, cheerful, and loyal support.</li>
+                    <li><strong>Blue Hydrangeas</strong>: Deep gratitude and warm understanding.</li>
+                    <li><strong>Tulips</strong>: Gentle care, affection, and sweet thoughts.</li>
+                    <li><strong>Baby's Breath</strong>: Everlasting dedication, support, and purity.</li>
+                  </ul>
+                  <p class="dictionary-hint">(Click bouquet again to hide)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CENTER SPINE with metal coils binder -->
+            <div class="notebook-spine">
+              <div class="spine-ring"></div>
+              <div class="spine-ring"></div>
+              <div class="spine-ring"></div>
+              <div class="spine-ring"></div>
+              <div class="spine-ring"></div>
+              <div class="spine-ring"></div>
+              <div class="spine-ring"></div>
+              <div class="spine-ring"></div>
+              <div class="spine-ring"></div>
+              <div class="spine-ring"></div>
+            </div>
+
+            <!-- RIGHT PAGE of the Open Book -->
+            <div class="scrapbook-page page-right">
+              <div class="page-corner-tape washi-tape-right"></div>
+              
+              <!-- Greeting Notebook Paper content -->
+              <div class="greeting-card">
+                <div class="thumbtack thumbtack-card"></div>
+                <div class="washi-tape-card"></div>
+                
+                <h3 class="card-title">A Note for My Strong Girl 📝</h3>
+                <div class="card-body-text">
+                  <p>I saw how hard you worked, and I am so incredibly proud of you.</p>
+                  
+                  <p>Even though I'm an outsider to <strong>AKPRO</strong> and <strong>HIMASISFO</strong>, standing by your side allowed me to see how much heart and effort you poured into leading <strong>SOS-TA</strong> (Sosialisasi Tugas Akhir) as the <strong>Chief Organizer</strong>. I know it was your first program, and the pressure was incredibly high, but you handled it so bravely and responsibly.</p>
+                  
+                  <p>Watching you grow, tackle every obstacle, and complete it all successfully was beautiful. You did an exceptional job, and I'm so lucky to be here cheering you on.</p>
+                  
+                  <p>Now that it is finally over, please take a good rest. You deserve all the happiness, comfort, and relaxation! 🌸</p>
+                </div>
+                
+                <div class="card-signature">With all my love, <span class="param-from">your boyfriend</span> 💖</div>
+                
+                <button id="secret-msg-btn" class="btn btn-primary" aria-label="Open Secret Message">
+                  💌 Open Secret Message
+                </button>
+              </div>
+            </div>
+
+            <!-- MIXED MEDIA DECORATIVE CUTOUTS -->
+            <div class="scrapbook-deco ticket-stub">
+              <span class="ticket-header">OFFICIAL PASS</span>
+              <span class="ticket-title">SOS-TA CHIEF</span>
+              <span class="ticket-footer">✨ YOU SHINED BRIGHT ✨</span>
+            </div>
+
+            <div class="scrapbook-deco memo-sticky">
+              <div class="paperclip"></div>
+              <p class="memo-title">📌 Memo for Her</p>
+              <p class="memo-body">Remember: drink warm water, take deep breaths, sleep 8+ hrs! 🥤🧸</p>
+            </div>
+
+            <div class="scrapbook-deco ribbon-tag">SOS-TA DONE! 🎉</div>
+
+            <div class="scrapbook-badge badge-yay">YAY!</div>
+            <div class="scrapbook-badge badge-percent">100%</div>
+            <div class="scrapbook-badge badge-love">L + F 💖</div>
+
+            <div class="scrapbook-doodle doodle-star-1">⭐</div>
+            <div class="scrapbook-doodle doodle-star-2">✨</div>
+            <div class="scrapbook-doodle doodle-flower-1">🌸</div>
+            <div class="scrapbook-doodle doodle-leaf-1">🌿</div>
+            <div class="scrapbook-doodle doodle-heart-1">❤️</div>
+            <div class="scrapbook-doodle doodle-sparkle-1">❇️</div>
+
+            <!-- Interactive Polaroid Memory Board (Draggable & Flippable) -->
+            <div class="memories-board">
+              
+              <!-- Polaroid 1 -->
+              <div class="polaroid-card polaroid-1" data-id="1">
+                <div class="polaroid-inner">
+                  <div class="polaroid-front">
+                    <div class="thumbtack thumbtack-polaroid"></div>
+                    <div class="polaroid-tape"></div>
+                    <div class="polaroid-img-frame">
+                      <img src="assets/memories-prep.png" class="polaroid-img" alt="Notebooks and coffee planning illustration">
+                    </div>
+                    <div class="polaroid-caption">Planning SOS-TA ✍️</div>
+                  </div>
+                  <div class="polaroid-back">
+                    <div class="thumbtack thumbtack-polaroid"></div>
+                    <div class="polaroid-note">
+                      <p>Remember sitting up late typing the rundown and task list? Worrying if everything was detailed enough? Your leadership dedication started right here! 📋</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Polaroid 2 -->
+              <div class="polaroid-card polaroid-2" data-id="2">
+                <div class="polaroid-inner">
+                  <div class="polaroid-front">
+                    <div class="thumbtack thumbtack-polaroid"></div>
+                    <div class="polaroid-tape"></div>
+                    <div class="polaroid-img-frame">
+                      <img src="assets/memories-event.png" class="polaroid-img" alt="Stage event microphone illustration">
+                    </div>
+                    <div class="polaroid-caption">Event Day! 🎪</div>
+                  </div>
+                  <div class="polaroid-back">
+                    <div class="thumbtack thumbtack-polaroid"></div>
+                    <div class="polaroid-note">
+                      <p>The rush of the opening session, the stage setups, ensuring guests felt welcomed... you handled the organizer spotlight like a total natural! ⭐</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Polaroid 3 -->
+              <div class="polaroid-card polaroid-3" data-id="3">
+                <div class="polaroid-inner">
+                  <div class="polaroid-front">
+                    <div class="thumbtack thumbtack-polaroid"></div>
+                    <div class="polaroid-tape"></div>
+                    <div class="polaroid-img-frame">
+                      <img src="assets/memories-team.png" class="polaroid-img" alt="Hearts and peace signs doodle">
+                    </div>
+                    <div class="polaroid-caption">I'm so Proud 💖</div>
+                  </div>
+                  <div class="polaroid-back">
+                    <div class="thumbtack thumbtack-polaroid"></div>
+                    <div class="polaroid-note">
+                      <p>Seeing you take on such a big responsibility and lead your team for the first time... you worked so hard and cared so much. I was cheering for you the whole way, and I'm so incredibly proud of my girl! 🥰</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SECRET LETTER MODAL VIEW
+       ========================================== -->
+  <div id="secret-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button id="close-modal-btn" class="close-btn" aria-label="Close Modal">&times;</button>
+      <h4 id="modal-title" class="letter-title">A Little Extra Secret... 💝</h4>
+      <div class="letter-body">
+        <p>My dearest,</p>
+        <p>I just wanted to write this little extra note for you. I saw all the late nights, the times you felt tired, and the quiet moments you worried if everything would turn out okay. Through it all, you kept going and led your very first program beautifully.</p>
+        <p>You are so capable, and I hope this success reminds you of how strong you are. I'm always here to support you, listen to you, and celebrate you. Thank you for your hard work, and for being the amazing person you are.</p>
+        <p>With all my love and proudest hugs, congrats on your first SOS-TA! You did amazing! 🌸</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       STICKER STAMP TOOLBAR PANEL (Including Hug and Kiss)
+       ========================================== -->
+  <div id="stamp-toolbar" class="stamp-toolbar">
+    <span class="stamp-tool-label">Sticker:</span>
+    <button class="stamp-btn" data-stamp="flower" title="🌸 Cherry Blossom">🌸</button>
+    <button class="stamp-btn" data-stamp="heart" title="💖 Heart Glow">💖</button>
+    <button class="stamp-btn" data-stamp="star" title="⭐ Gold Star">⭐</button>
+    <button class="stamp-btn" data-stamp="bear" title="🧸 Cuddly Bear">🧸</button>
+    <button class="stamp-btn" data-stamp="ribbon" title="🎀 Pink Bow">🎀</button>
+    <button class="stamp-btn" data-stamp="hug" title="🤗 Cozy Hug">🤗</button>
+    <button class="stamp-btn" data-stamp="kiss" title="💋 Sweet Kiss">💋</button>
+  </div>
+
+  <!-- ==========================================
+       FLOATING INTERACTIVE CONTROLS
+       ========================================== -->
+  <!-- Left-side Controls (Replay) -->
+  <div class="floating-left-controls">
+    <button id="replay-btn" class="bubble-btn" title="Open Again" aria-label="Replay greeting">
+      🎁
+    </button>
+  </div>
+
+  <!-- Right-side Controls (Audio) -->
+  <div class="floating-controls">
+    <button id="music-toggle-btn" class="bubble-btn paused" title="Play Music" aria-label="Toggle music play state">
+      <span id="music-icon">🔇</span>
+    </button>
+  </div>
+
+  <!-- Core Javascript Modules -->
+  <script src="js/audio.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
