@@ -469,6 +469,39 @@ body.stamp-cursor-kiss { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http:/
   }
 }
 
+/* Scrapbook congratulations banner cutout on left page */
+.scrapbook-header-banner {
+  background: #fffdf0; /* soft vintage cream paper */
+  border: 1px dashed rgba(255, 111, 181, 0.4);
+  padding: 16px 20px;
+  border-radius: 8px 25px 6px 30px / 10px 8px 20px 12px; /* hand-cut wavy borders */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  text-align: center;
+  transform: rotate(-2deg);
+  position: relative;
+  clip-path: polygon(
+    0% 0%, 100% 0%, 100% 100%, 0% 100%,
+    0% 75%, 2% 50%, 0% 25%
+  );
+}
+
+.banner-text {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--hot-pink);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.banner-subtext {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.15rem;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
 /* Scrapbook Pages (Left & Right Sheets) */
 .scrapbook-page {
   background: var(--white);
@@ -1008,19 +1041,42 @@ body.stamp-cursor-kiss { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http:/
   align-items: center;
   justify-content: center;
   gap: 10px;
-  box-shadow: 0 8px 20px rgba(220, 150, 190, 0.35);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* Scrapbook style button overrides */
 .btn-primary {
-  background: linear-gradient(135deg, #FF6FB5, #FFB6D9);
-  color: var(--white);
+  background: #fff6f8;
+  color: #ff6fb5;
+  border: 2px dashed #ff6fb5;
+  border-radius: 8px 18px 6px 15px / 12px 6px 14px 10px; /* irregular hand-cut shapes */
+  font-weight: 700;
   width: 100%;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+  transform: rotate(-1.5deg);
+  position: relative;
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(255, 111, 181, 0.45);
+  transform: scale(1.03) rotate(1.5deg);
+  background: #ffebf0;
+  box-shadow: 4px 8px 18px rgba(255, 111, 181, 0.25);
+  border-style: solid; /* solid border on hover */
+}
+
+/* Washi tape snippet on the button corner */
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 15px;
+  width: 60px;
+  height: 15px;
+  background: rgba(174, 239, 255, 0.65);
+  transform: rotate(-8deg);
+  border-left: 1px dashed rgba(255,255,255,0.7);
+  border-right: 1px dashed rgba(255,255,255,0.7);
+  pointer-events: none;
 }
 
 /* ==========================================================================
@@ -1055,6 +1111,7 @@ body.stamp-cursor-kiss { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http:/
 .thumbtack-polaroid { top: 4px; left: 50%; background: #FFCC00; } /* yellow */
 .thumbtack-bouquet { top: 0; left: 50%; background: #34C759; } /* green */
 .thumbtack-dictionary { top: 0; left: 50%; background: #007AFF; } /* blue */
+.thumbtack-banner { top: 0; left: 50%; background: #FF9500; } /* orange */
 
 /* ==========================================================================
    INTERACTIVE POLAROID MEMORIES BOARD
